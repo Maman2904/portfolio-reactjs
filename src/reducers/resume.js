@@ -1,4 +1,8 @@
 const dataResume = {
+  foto: "asset/img/me.png",
+  nama: "Maman Sulaeman",
+  kuote:
+    "saya Maman Sulaeman fresh graduate, miliki kemampuan programming,python, Javascript, ReactJS, React Native, ExpressJs, HTML dan php, telah membuat beberapa project. Saya juga terbiasa mengoperasikan OS Linux,",
   education: [
     {
       jurusan: "Teknik Informatika",

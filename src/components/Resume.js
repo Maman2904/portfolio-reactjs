@@ -3,9 +3,11 @@ import { connect } from "react-redux";
 
 const mapStateToProps = (state) => {
   return {
+    foto: state.home.foto,
+    nama: state.home.nama,
     education: state.resume.education,
     work: state.resume.work,
-    quotes: state.resume.quotes,
+    kuote: state.resume.kuote,
     quotesmaker: state.resume.quotesmaker,
   };
 };
@@ -62,11 +64,7 @@ class Resume extends Component {
                   {/* content */}
                   <div className="graduation-description">
                     <p>
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text ever since the 1500s, when an unknown
-                      printer took a galley of type and scrambled it to make a
-                      type specimen book.
+                      Saya lulusan tahun 2020, di Universitas PancaSakti Bekasi,
                     </p>
                   </div>
                   {/* /Content */}
@@ -100,11 +98,9 @@ class Resume extends Component {
                   {/* content */}
                   <div className="graduation-description">
                     <p>
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text ever since the 1500s, when an unknown
-                      printer took a galley of type and scrambled it to make a
-                      type specimen book.
+                      saya bekerja di pt karya komponen presisi sebagai operator
+                      dan quality assurance selama 2 tahun, job desk: mengukur
+                      dan memastikan semua part berdimensi ok
                     </p>
                   </div>
                   {/* /Content */}
@@ -116,7 +112,7 @@ class Resume extends Component {
           {/*/ SECTION: WORK EXPERIENCE */}
           <h2 className="section-title2">
             <i className="fa fa-commenting" />
-            &nbsp; Testimonials
+            &nbsp; Tentang Saya
           </h2>
           {/* Testimonials */}
           <div className="testimonials">
@@ -126,77 +122,22 @@ class Resume extends Component {
               <div className="testimonial-item">
                 {/* Testimonial Content */}
                 <div className="testimonial-content">
-                  <p>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec consequat malesuada aliquet. Morbi vulputate nisl eget
-                    adipiscing consequat. Cras arcu tortor, ornare vel libero
-                    et, sagittis adipiscing leo. Aenean eget."
-                  </p>
+                  <p>{this.props.kuote}</p>
                 </div>
                 {/* /Testimonial Content */}
                 {/* Testimonial Author */}
                 <div className="testimonial-credits">
                   {/* picture */}
                   <div className="testimonial-picture">
-                    <img src="img/team2.jpg" alt />
+                    <img src={this.props.foto} alt />
                   </div>
                   {/* /picture */}
-                  <p className="testimonial-author">Melissa Alvarez</p>
-                  <p className="testimonial-firm">Trexus Co.</p>
+                  <p className="testimonial-author">{this.props.nama}</p>
                 </div>
                 {/* /Testimonial Author */}
               </div>
               {/* /item */}
               {/* item */}
-              <div className="testimonial-item">
-                {/* Testimonial Content */}
-                <div className="testimonial-content">
-                  <p>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec consequat malesuada aliquet. Morbi vulputate nisl eget
-                    adipiscing consequat. Cras arcu tortor, ornare vel libero
-                    et, sagittis adipiscing leo. Aenean eget."
-                  </p>
-                </div>
-                {/* /Testimonial Content */}
-                {/* Testimonial Author */}
-                <div className="testimonial-credits">
-                  {/* picture */}
-                  <div className="testimonial-picture">
-                    <img src="img/team1.jpg" alt />
-                  </div>
-                  {/* /picture */}
-                  <p className="testimonial-author">John Rex</p>
-                  <p className="testimonial-firm">DotRex Co.</p>
-                </div>
-                {/* /Testimonial Author */}
-              </div>
-              {/* /item */}
-              {/* item */}
-              <div className="testimonial-item">
-                {/* Testimonial Content */}
-                <div className="testimonial-content">
-                  <p>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec consequat malesuada aliquet. Morbi vulputate nisl eget
-                    adipiscing consequat. Cras arcu tortor, ornare vel libero
-                    et, sagittis adipiscing leo. Aenean eget."
-                  </p>
-                </div>
-                {/* /Testimonial Content */}
-                {/* Testimonial Author */}
-                <div className="testimonial-credits">
-                  {/* picture */}
-                  <div className="testimonial-picture">
-                    <img src="img/team3.jpg" alt />
-                  </div>
-                  {/* /picture */}
-                  <p className="testimonial-author">Jhonathan Smith</p>
-                  <p className="testimonial-firm">RedWings Co.</p>
-                </div>
-                {/* /Testimonial Author */}
-              </div>
-              {/* /item */}
             </div>
             {/* Testimonial Slides */}
           </div>
@@ -222,10 +163,10 @@ class Resume extends Component {
             </div>
             {/* /Buttons */}
             {/* Quote */}
-            <p className="footer-quote">
+            {/* <p className="footer-quote">
               "The best way to predict the future is to create it" <br />
               <i>Peter Drucker</i>
-            </p>
+            </p> */}
             {/* /Quote */}
           </div>
         </div>

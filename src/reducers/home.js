@@ -1,8 +1,8 @@
 const dataMe = {
   foto: "asset/img/me.png",
   nama: "Maman Sulaeman",
-  job: "Software engineer",
-  title: "software developer",
+  job: "Fresh Graduate",
+  title: "software engginer",
   email: "mamansulaeman2904@gmail.com",
   phone: "+62 887 172 9987",
   instagram: "https://www.instagram.com/maman.sulae_man/",

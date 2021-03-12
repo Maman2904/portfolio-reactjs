@@ -11,7 +11,7 @@ class Menu extends Component {
                         <li><a href="#page-resume" className="link-page">Resume</a></li>
                         <li><a href="#page-skills" className="link-page">Skills</a></li>
                         <li><a href="#page-portfolio" className="link-page">Portfolio</a></li>
-                        <li><a href="#page-blog" className="link-page">Blog</a></li>
+                        {/* <li><a href="#page-blog" className="link-page">Blog</a></li> */}
                         <li><a href="#page-contact" className="link-page">Contact</a></li>
                     </ul>
                 </div>
